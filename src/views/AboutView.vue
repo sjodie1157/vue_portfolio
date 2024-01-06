@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="about">
+
        <div v-if="!loading || about.length">
         <div class="row">
+          <h1>
+            About me
+          </h1>
             <div class="col">
               <h3>
                {{ about[0].aboutParagraph }}

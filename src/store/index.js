@@ -4,7 +4,8 @@ const dataUrl = 'https://sjodie1157.github.io/todayPortfolioData/data/'
 export default createStore({
   state: {
     home: null,
-    about: null
+    about: null,
+    contact: null
   },
   getters: {
   },
@@ -14,6 +15,9 @@ export default createStore({
     },
     setAbout(state, value) {
       state.about = value
+    },
+    setContact(state, value) {
+      state.contact = value
     }
   },
   actions: {
@@ -26,6 +30,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let { about } = await res.json()
       context.commit('setAbout', about)
+    },
+    async fetchContact(context) {
+      let res = await fetch(dataUrl)
+      let { contact } = await res.json()
+      context.commit('setContact', contact)
     }
   },
   modules: {
