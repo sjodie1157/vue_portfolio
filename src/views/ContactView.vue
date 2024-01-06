@@ -45,7 +45,7 @@
                                 <button type="submit">Send</button>
                             </div>
                             <div class="col my-2">
-                                <button type="submit">Clear Form</button>
+                                <button type="reset">Clear Form</button>
                             </div>
                         </div>
                     </div>
