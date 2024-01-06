@@ -36,7 +36,7 @@ export default {
   computed: {
     home() {
       return this.$store.state.home || [];
-    },
+    }
   },
   async mounted() {
     try {
