@@ -38,7 +38,7 @@ export default createStore({
     async fetchReview(context) {
       let res = await fetch(dataUrl)
       let { review } = await res.json()
-      context.commit('setReview', review)
+      context.commit('setReview', review )
     },
     async fetchContact(context) {
       let res = await fetch(dataUrl)

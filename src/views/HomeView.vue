@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div v-if="!loading || home.length">
+    <div v-if="loading = false || home.length">
       <div class="row">
           <div class="col">
             <h2>
