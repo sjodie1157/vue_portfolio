@@ -5,6 +5,7 @@ export default createStore({
   state: {
     home: null,
     about: null,
+    projects: null,
     review: null,
     contact: null
   },
@@ -16,6 +17,9 @@ export default createStore({
     },
     setAbout(state, value) {
       state.about = value
+    },
+    setProjects(state, value) {
+      state.projects = value
     },
     setReview(state, value) {
       state.review = value
@@ -34,6 +38,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let { about } = await res.json()
       context.commit('setAbout', about)
+    },
+    async fetchProjects(context) {
+      let res = await fetch(dataUrl)
+      let { projects } = await res.json()
+      context.commit('setProjects', projects )
     },
     async fetchReview(context) {
       let res = await fetch(dataUrl)
