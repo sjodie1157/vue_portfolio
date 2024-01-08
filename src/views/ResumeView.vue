@@ -13,7 +13,7 @@
                         <p>
                             {{ experience.place }}
                         </p>
-                            <a type="" :href="experience.certificate">download Certificate</a>
+                        <a type="" :href="experience.certificate"><button type="button">Download certificate</button></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ export default {
         try {
             await this.$store.dispatch('fetchResume');
         } catch (error) {
-            console.error('Error fetching resume data:', error);
+            console.error('Error fetching resume data', error);
         } finally {
             this.loading = false;
         }
@@ -58,13 +58,5 @@ export default {
     display: flex;
     flex-basis: 20%;
     text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    border-radius: .3pc;
-    padding: rem;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
     <div v-if="loading = false || projects.length">
-        <CardComp/>
+        <CardComp />
     </div>
     <div v-else>
-        <SpinnerComp/>
+        <SpinnerComp />
     </div>
 </template>
 
@@ -26,13 +26,11 @@ export default {
             await this.$store.dispatch('fetchProjects');
             this.loading = false;
         } catch (error) {
-            console.error('Error fetching projects data:', error);
+            console.error('Error fetching projects data', error);
             this.loading = false;
         }
     }
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

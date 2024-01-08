@@ -2,7 +2,7 @@
     <div class="contact">
         <div v-if="!loading || contact.length">
             <h1>
-                Contact Me 
+                Contact Me
             </h1>
             <div class="container">
                 <div class="row">
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div v-else>
-          <SpinnerComp/>
+            <SpinnerComp />
         </div>
     </div>
 </template>
@@ -80,13 +80,11 @@ export default {
             await this.$store.dispatch('fetchContact');
             this.loading = false;
         } catch (error) {
-            console.error('Error fetching contact data:', error);
+            console.error('Error fetching contact data', error);
             this.loading = false;
         }
     },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
