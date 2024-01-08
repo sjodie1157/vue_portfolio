@@ -24,6 +24,9 @@ export default createStore({
     setReview(state, value) {
       state.review = value
     },
+    setResume(state, value) {
+      state.resume = value
+    },
     setContact(state, value) {
       state.contact = value
     }
@@ -48,6 +51,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let { review } = await res.json()
       context.commit('setReview', review )
+    },
+    async fetchResume(context) {
+      let res = await fetch(dataUrl)
+      let { resume } = await res.json()
+      context.commit('setResume', resume )
     },
     async fetchContact(context) {
       let res = await fetch(dataUrl)
