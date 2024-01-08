@@ -18,26 +18,26 @@
                         </h4>
                     </div>
                 </div>
-                <form action="">
+                <form action="https://formspree.io/f/moqgqoga" method="POST">
                     <div class="container">
                         <div class="row">
                             <div class="col">
                                 <h4>
                                     Name
                                 </h4>
-                                <input type="text" placeholder="Type Name Here" required>
+                                <input type="text" name="firstName" placeholder="Type Name Here" required>
                             </div>
                             <div class="col">
                                 <h4>
                                     Surname
                                 </h4>
-                                <input type="text" placeholder="Type Surname Here" required>
+                                <input type="text" name="lastName" placeholder="Type Surname Here" required>
                             </div>
                             <div class="col">
                                 <h4>
                                     Email
                                 </h4>
-                                <input type="text" placeholder="Type Email Here" required>
+                                <input type="text" name="email" placeholder="Type Email Here" required>
                             </div>
                         </div>
                         <div class="row">
