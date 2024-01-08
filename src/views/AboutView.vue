@@ -2,23 +2,23 @@
   <div>
     <div class="about">
 
-       <div v-if="!loading || about.length">
+      <div v-if="!loading || about.length">
         <div class="row">
           <h1>
             About me
           </h1>
-            <div class="col">
-              <h3>
-               {{ about[0].aboutParagraph }}
-              </h3>
-            </div>
-            <div class="col">
-              <img :src="about[1].profImaArt" alt="profImg" loading="eager">
-            </div>
+          <div class="col">
+            <h3>
+              {{ about[0].aboutParagraph }}
+            </h3>
+          </div>
+          <div class="col">
+            <img :src="about[1].profImaArt" alt="profImg" loading="eager">
+          </div>
         </div>
       </div>
       <div v-else>
-        <SpinnerComp/>
+        <SpinnerComp />
       </div>
     </div>
   </div>
@@ -46,13 +46,11 @@ export default {
       await this.$store.dispatch('fetchAbout');
       this.loading = false;
     } catch (error) {
-      console.error('Error fetching about data:', error);
+      console.error('Error fetching about data', error);
       this.loading = false;
     }
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

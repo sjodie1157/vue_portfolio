@@ -37,7 +37,7 @@ export default {
       await this.$store.dispatch('fetchReview');
       this.loading = false;
     } catch (error) {
-      console.error('Error fetching review data:', error);
+      console.error('Error fetching review data', error);
       this.loading = false;
     }
   },

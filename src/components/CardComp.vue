@@ -20,14 +20,14 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">{{ project.projName }}</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                     </button>
                                 </div>
                                 <div class="modal-body">
                                     <img :src="project.projImage" alt="modalImg">
                                     <p>{{ project.projDisc }}</p>
-                                    <a :href="project.netlifyLink" target="_blank"><button type="button">Netlify</button></a>
+                                    <a :href="project.netlifyLink" target="_blank"><button
+                                            type="button">Netlify</button></a>
                                     <a :href="project.githubLink" target="_blank"><button type="button">Github</button></a>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ export default {
             await this.$store.dispatch('fetchProjects');
             this.loading = false;
         } catch (error) {
-            console.error('Error fetching projects data:', error);
+            console.error('Error fetching projects data', error);
             this.loading = false;
         }
     }

@@ -2,10 +2,10 @@
     <div class="review">
         <div v-if="loading = false || review.length">
             <h2>Re<span>-vue</span></h2>
-            <CarouselComp/>
+            <CarouselComp />
         </div>
         <div v-else>
-            <SpinnerComp/>
+            <SpinnerComp />
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
         CarouselComp
     },
     computed: {
-         review() {
+        review() {
             return this.$store.state.review || [];
         }
     },
@@ -30,12 +30,11 @@ export default {
             await this.$store.dispatch('fetchReview');
             this.loading = false;
         } catch (error) {
-            console.error('Error fetching review data:', error);
+            console.error('Error fetching review data', error);
             this.loading = false;
         }
     }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
