@@ -7,6 +7,7 @@ export default createStore({
     about: null,
     projects: null,
     review: null,
+    resume: null,
     contact: null
   },
   getters: {
