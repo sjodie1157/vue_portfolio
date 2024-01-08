@@ -1,7 +1,6 @@
 <template>
     <div v-if="loading = false || projects.length">
         <CardComp/>
-        <ModalComp/>
     </div>
     <div v-else>
         <SpinnerComp/>
@@ -11,13 +10,11 @@
 <script>
 import CardComp from '@/components/CardComp.vue';
 import SpinnerComp from '@/components/SpinnerComp.vue';
-import ModalComp from '@/components/ModalComp.vue';
 
 export default {
     components: {
         CardComp,
-        SpinnerComp,
-        ModalComp
+        SpinnerComp
     },
     computed: {
         projects() {
