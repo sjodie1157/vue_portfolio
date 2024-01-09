@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="about">
-
+    <div class="about my-5">
+      <transition name="fade">
       <div v-if="!loading && about.length">
         <div class="row">
           <h1>
-            About me
+            About <span>me</span>
           </h1>
           <div class="col">
             <h3>
@@ -13,13 +13,14 @@
             </h3>
           </div>
           <div class="col">
-            <img :src="about[1].profImaArt" alt="profImg" loading="eager">
+            <img :src="about[1].profImaArt" alt="professionalimage" loading="eager">
           </div>
         </div>
       </div>
       <div v-else>
         <SpinnerComp />
       </div>
+    </transition>
     </div>
   </div>
 </template>
@@ -53,4 +54,38 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+span {
+  color: #009DF5;
+}
+
+:is(h1) {
+  font-size: 75px;
+  font-weight: 1000;
+  transition: font-size 0.5s, font-weight 0.5s;
+}
+
+:is(h3) {
+  font-size: 25px;
+  font-weight: 600;
+  transition: font-size 0.5s, font-weight 0.5s;
+}
+
+
+img[alt="professionalimage"] {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+</style>

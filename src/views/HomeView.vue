@@ -42,7 +42,6 @@ export default {
   data() {
     return {
       loading: true,
-      reload: false,
     };
   },
   computed: {
@@ -54,7 +53,6 @@ export default {
     try {
       await this.$store.dispatch('fetchHome');
       this.loading = false;
-      this.reload = true;
     } catch (error) {
       console.error('Error fetching home data', error);
       this.loading = false;
@@ -77,7 +75,6 @@ export default {
 
 span {
   color: #009DF5;
-  transition: color 0.5s;
 }
 
 :is(h1) {
@@ -96,7 +93,6 @@ img[alt="professionalArt"] {
   position: fixed;
   right: 0;
   bottom: 0;
-  transition: right 0.5s, bottom 0.5s, opacity 0.5s;
 }
 
 .btn-3 {
