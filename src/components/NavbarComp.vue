@@ -10,7 +10,7 @@
         <span class="navbar-text">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link active" to="/">Home</router-link>
+              <router-link class="nav-link" to="/">Home</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/about">About</router-link>
@@ -40,4 +40,15 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.nav-link {
+  color: #009DF5;
+    font-size: 20px;
+  font-weight: 800;
+}
+.navbar-brand {
+  color: #009DF5;
+  font-size: 25px;
+  font-weight: 800;
+}
+</style>
