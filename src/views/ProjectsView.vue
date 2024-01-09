@@ -1,5 +1,5 @@
 <template>
-    <div v-if="loading = false || projects.length">
+    <div v-if="!loading && projects.length">
         <CardComp />
     </div>
     <div v-else>
