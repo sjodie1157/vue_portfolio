@@ -2,7 +2,7 @@
   <div>
     <div class="about">
 
-      <div v-if="!loading || about.length">
+      <div v-if="!loading && about.length">
         <div class="row">
           <h1>
             About me

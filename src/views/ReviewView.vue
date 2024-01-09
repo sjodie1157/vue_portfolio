@@ -1,6 +1,6 @@
 <template>
     <div class="review">
-        <div v-if="loading = false || review.length">
+        <div v-if="!loading && review.length">
             <h2>Re<span>-vue</span></h2>
             <CarouselComp />
         </div>

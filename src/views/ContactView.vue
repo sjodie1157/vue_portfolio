@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <div v-if="!loading || contact.length">
+        <div v-if="!loading && contact.length">
             <h1>
                 Contact Me
             </h1>
