@@ -179,4 +179,5 @@ img[alt="professionalArt"] {
 
 .btn-3 span:hover:after {
   width: 100%;
-}</style>
+}
+</style>
