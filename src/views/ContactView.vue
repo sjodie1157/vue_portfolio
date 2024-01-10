@@ -1,21 +1,22 @@
 <template>
     <div class="contact">
+        <transition name="fade">
         <div v-if="!loading && contact.length">
-            <h1>
-                Contact Me
+            <h1 class="my-5">
+                Contact <span>Me</span>
             </h1>
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h4>
+                        <h2>
                             Based in : <span>{{ contact[0].area }}</span>
-                        </h4>
-                        <h4>
+                        </h2>
+                        <h2>
                             Email : <span>{{ contact[0].email }}</span>
-                        </h4>
-                        <h4>
+                        </h2>
+                        <h2>
                             Cell : <span>{{ contact[0].cell }}</span>
-                        </h4>
+                        </h2>
                     </div>
                 </div>
                 <form action="https://formspree.io/f/moqgqoga" method="POST">
@@ -41,11 +42,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col my-2">
-                                <button type="submit">Send</button>
-                            </div>
-                            <div class="col my-2">
-                                <button type="reset">Clear Form</button>
+                            <div class="col d-flex">
+                                <div class="con">
+                                    <button type="submit" class="btn-3">Send</button>
+                                </div>
+                                <div class="con">
+                                    <button type="reset" class="btn-3">Clear Form</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -55,6 +58,7 @@
         <div v-else>
             <SpinnerComp />
         </div>
+    </transition>
     </div>
 </template>
 
@@ -87,4 +91,130 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+:is(h1) {
+  font-size: 75px;
+  font-weight: 1000;
+  transition: font-size 0.5s, font-weight 0.5s;
+}
+
+:is(h2) {
+  font-size: 40px;
+  margin: 2rem 0;
+}
+
+input {
+    background-color: white;
+    color: #009DF5;
+    border: 2px solid #009DF5;
+    border-radius: .3pc;
+}
+
+span {
+  color: #009DF5;
+}
+
+
+.btn-3 {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(0deg, #009DF5 0%, black 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: .3pc;
+  transition: background 0.5s;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: color 0.5s;
+}
+
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+  color: black;
+}
+
+.btn-3:hover:before {
+  height: 100%;
+}
+
+.btn-3:hover:after {
+  width: 100%;
+}
+
+.btn-3 span:hover {
+  color: #009DF5;
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #009DF5;
+  transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3 span:hover:before {
+  height: 100%;
+}
+
+.btn-3 span:hover:after {
+  width: 100%;
+}
+.con {
+    margin: 2em 2em 0 0em;
+}
+</style>
