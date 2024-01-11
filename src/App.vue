@@ -1,7 +1,8 @@
 <template>
   <NavbarComp />
   <router-view />
-  <main></main>
+  <main>
+  </main>
   <FooterComp />
 </template>
 

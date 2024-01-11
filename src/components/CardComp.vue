@@ -1,6 +1,5 @@
 <template>
     <div>
-        <transition name="fade"></transition>
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center m-lg-5" v-for="project in projects" :key="project.id">
@@ -8,8 +7,7 @@
                         <img :src="project.projImage" class="card-img-top" alt="projects" />
                         <div class="card-body d-flex justify-content-center flex-column">
                             <h5 class="card-title d-flex justify-content-center">{{ project.projName }}</h5>
-                            <button type="button" :data-bs-toggle="'modal'"
-                                :data-bs-target="'#modal' + project.id">
+                            <button type="button" :data-bs-toggle="'modal'" :data-bs-target="'#modal' + project.id">
                                 click for details
                             </button>
                         </div>
@@ -28,10 +26,12 @@
                                     <p>{{ project.projDisc }}</p>
                                     <div class="row">
                                         <div class="col d-flex justify-content-center my-1">
-                                            <a :href="project.netlifyLink" target="_blank" id="netbtn"><button type="button" class="btn-3">Netlify</button></a>
+                                            <a :href="project.netlifyLink" target="_blank" id="netbtn"><button type="button"
+                                                    class="btn-3">Netlify</button></a>
                                         </div>
                                         <div class="col d-flex justify-content-center">
-                                            <a :href="project.githubLink" target="_blank" id="gitbtn"><button type="button" class="btn-3">Github</button></a>
+                                            <a :href="project.githubLink" target="_blank" id="gitbtn"><button type="button"
+                                                    class="btn-3">Github</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -64,17 +64,16 @@ export default {
 </script>
 
 <style scoped>
-
 h5 {
     font-weight: 600;
     font-size: 25px;
+    color: white;
 }
 
 img[alt="modalImg"] {
     width: 100%;
     border-radius: .5pc;
 }
-
 
 button {
     border: 2px solid #009DF5;
@@ -86,7 +85,6 @@ button {
 }
 
 button:hover {
-
     background-color: transparent;
     color: #009DF5;
     font-size: 20px;
@@ -106,101 +104,113 @@ img[alt="projects"] {
 }
 
 .modal-body {
-    background-color: rgba(128, 128, 128, 0.384);
+    background-image: linear-gradient(#009bf585, #009bf5);
+    border-bottom-left-radius: .5pc;
+    border-bottom-right-radius: .5pc;
 }
+
+p {
+    color: white;
+}
+
 .modal-header {
-    background-color: rgba(128, 128, 128, 0.645);
+    background-image: linear-gradient(#009bf5, #009bf585);
 }
+
 .card:hover {
     border: 3px solid #0076bb93;
     box-shadow: rgba(0, 0, 0, 0.547) 0px 5px 5px 5px;
     border-radius: .5pc;
 }
 
+.modal-content{
+    background-color: #009bf500;
+}
+
+
 .btn-3 {
-  background: rgb(0, 172, 238);
-  background: linear-gradient(0deg, #009DF5 0%, black 100%);
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  border-radius: .3pc;
-  transition: background 0.5s;
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, #009DF5 0%, black 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: .3pc;
+    transition: background 0.5s;
 }
 
 .btn-3 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: white;
-  transition: color 0.5s;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: color 0.5s;
 }
 
 .btn-3:before,
 .btn-3:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  background: rgba(2, 126, 251, 1);
-  transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
 }
 
 .btn-3:before {
-  height: 0%;
-  width: 2px;
+    height: 0%;
+    width: 2px;
 }
 
 .btn-3:after {
-  width: 0%;
-  height: 2px;
+    width: 0%;
+    height: 2px;
 }
 
 .btn-3:hover {
-  background: transparent;
-  box-shadow: none;
+    background: transparent;
+    box-shadow: none;
 }
 
 .btn-3:hover:before {
-  height: 100%;
+    height: 100%;
 }
 
 .btn-3:hover:after {
-  width: 100%;
+    width: 100%;
 }
 
 .btn-3 span:hover {
-  color: #009DF5;
+    color: #009DF5;
 }
 
 .btn-3 span:before,
 .btn-3 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  background: #009DF5;
-  transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #009DF5;
+    transition: all 0.3s ease;
 }
 
 .btn-3 span:before {
-  width: 2px;
-  height: 0%;
+    width: 2px;
+    height: 0%;
 }
 
 .btn-3 span:after {
-  width: 0%;
-  height: 2px;
+    width: 0%;
+    height: 2px;
 }
 
 .btn-3 span:hover:before {
-  height: 100%;
+    height: 100%;
 }
 
 .btn-3 span:hover:after {
-  width: 100%;
+    width: 100%;
 }
-
 </style>

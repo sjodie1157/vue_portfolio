@@ -1,5 +1,5 @@
 <template>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div id="carouselExampleDark" class="carousel slide">
     <div class="carousel-inner">
         <div class="carousel-indicators">
           <button v-for="(person, index) in review" :key="person.id" type="button" data-bs-target="carouselExampleDark"
@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 img[alt="Slide"] {
-  width: 290px;
+  width: 310px;
   display: flex;
   justify-content: end;
   height: 350px;
@@ -61,8 +61,14 @@ img[alt="Slide"] {
   border: 5px solid #009DF5;
 }
 
+h1 {
+  color: #009DF5;
+  font-size: 3rem;
+}
+
 p {
   font-size: 18px;
+  color: white;
 }
 
 .carousel-indicators {

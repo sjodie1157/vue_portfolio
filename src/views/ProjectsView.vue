@@ -57,12 +57,11 @@ export default {
 :is(h1) {
   font-size: 75px;
   font-weight: 1000;
-  transition: font-size 0.5s, font-weight 0.5s;
+  color: white;
 }
 
 span {
   color: #009DF5;
 }
-
 
 </style>
