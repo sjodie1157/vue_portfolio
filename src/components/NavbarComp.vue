@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">J Smith</a>
+      <router-link class="navbar-brand" to="/">J Smith</router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,12 +43,27 @@ export default {
 <style scoped>
 .nav-link {
   color: #009DF5;
-    font-size: 20px;
+  font-size: 20px;
   font-weight: 800;
+  transition: color 0.3s ease;
 }
+
+.nav-link:hover {
+  color: white;
+}
+
 .navbar-brand {
   color: #009DF5;
   font-size: 25px;
   font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.router-link-active {
+  color: white!important;
 }
 </style>

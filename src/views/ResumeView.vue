@@ -72,11 +72,15 @@ export default {
 :is(h1) {
   font-size: 75px;
   font-weight: 1000;
-  transition: font-size 0.5s, font-weight 0.5s;
+  color: white;
 }
 
 span {
   color: #009DF5;
+}
+
+p {
+    color: white;
 }
 
 .fade-enter-active,
@@ -97,6 +101,7 @@ span {
 #line {
     font-size: 60px;
     font-weight: 800;
+    color: white;
 }
 
 p:first-child {
@@ -122,7 +127,7 @@ p:nth-child(4) {
 
 button {
     color: black;
-    background-color: white;
+    background-color: #009DF5;
     border: 2px solid #009DF5;
     border-radius: .3pc;
     font-size: 20px;

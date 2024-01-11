@@ -12,4 +12,9 @@
   margin: 0 2em;
 }
 
+body {
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDI0NWtwbGtqZWhtYzF6N3M5dTl2N2w5cnFzZTQzNGpyam1ua3hpbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vUizTGWRIRPXGBTBVR/giphy-downsized-large.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 

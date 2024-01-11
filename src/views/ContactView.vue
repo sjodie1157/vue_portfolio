@@ -106,12 +106,17 @@ export default {
 :is(h1) {
   font-size: 75px;
   font-weight: 1000;
-  transition: font-size 0.5s, font-weight 0.5s;
+  color: white;
 }
 
 :is(h2) {
   font-size: 40px;
   margin: 2rem 0;
+  color: white;
+}
+
+:is(h4) {
+  color: white;
 }
 
 input {
@@ -172,7 +177,7 @@ span {
 .btn-3:hover {
   background: transparent;
   box-shadow: none;
-  color: black;
+  color: #009DF5;
 }
 
 .btn-3:hover:before {
