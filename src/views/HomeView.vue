@@ -232,4 +232,12 @@ img[alt="professionalArt"] {
 .btn-3 span:hover:after {
   width: 100%;
 }
+
+svg {
+  width: 50px;
+  margin: 0 2em;
+  background-color: white;
+  padding: .1em;
+  border-radius: 2pc;
+}
 </style>

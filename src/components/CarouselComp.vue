@@ -5,7 +5,7 @@
         :data-bs-interval="10000">
         <div class="row d-flex justify-content-center">
           <div class="col-12 col-md-3">
-            <img :src="person.persImage" class="d-block w-100" :alt="`Slide`">
+            <img :src="person.persImage" class="d-block w-100" :alt="`Slide`" loading="eager">
             <div class="carousel-caption d-none d-md-block"></div>
           </div>
           <div class="col-12 col-md-5">
