@@ -1,98 +1,97 @@
 <template>
-    <div class="contact">
-        <transition name="fade">
-        <div v-if="!loading && contact.length">
-            <h1 class="my-5">
-                Contact <span>Me</span>
-            </h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2>
-                            Based in : <span>{{ contact[0].area }}</span>
-                        </h2>
-                        <h2>
-                            Email : <span>{{ contact[0].email }}</span>
-                        </h2>
-                        <h2>
-                            Cell : <span>{{ contact[0].cell }}</span>
-                        </h2>
-                    </div>
-                </div>
-                <form action="https://formspree.io/f/moqgqoga" method="POST">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <h4>
-                                    Name
-                                </h4>
-                                <input type="text" name="firstName" required>
-                            </div>
-                            <div class="col">
-                                <h4>
-                                    Surname
-                                </h4>
-                                <input type="text" name="lastName" required>
-                            </div>
-                            <div class="col">
-                                <h4>
-                                    Email
-                                </h4>
-                                <input type="text" name="email" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col d-flex">
-                                <div class="con">
-                                    <button type="submit" class="btn-3">Send</button>
-                                </div>
-                                <div class="con">
-                                    <button type="reset" class="btn-3">Clear Form</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+  <div class="contact">
+    <transition name="fade">
+      <div v-if="!loading && contact.length">
+        <h1 class="my-5">
+          Contact <span>Me</span>
+        </h1>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2>
+                Based in : <span>{{ contact[0].area }}</span>
+              </h2>
+              <h2>
+                Email : <span>{{ contact[0].email }}</span>
+              </h2>
+              <h2>
+                Cell : <span>{{ contact[0].cell }}</span>
+              </h2>
             </div>
+          </div>
+          <form action="https://formspree.io/f/moqgqoga" method="POST">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h4>
+                    Name
+                  </h4>
+                  <input type="text" name="firstName" required>
+                </div>
+                <div class="col">
+                  <h4>
+                    Surname
+                  </h4>
+                  <input type="text" name="lastName" required>
+                </div>
+                <div class="col">
+                  <h4>
+                    Email
+                  </h4>
+                  <input type="text" name="email" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-flex flex-wrap">
+                  <div class="con">
+                    <button type="submit" class="btn-3">Send</button>
+                  </div>
+                  <div class="con">
+                    <button type="reset" class="btn-3">Clear Form</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <div v-else>
-            <SpinnerComp />
-        </div>
+      </div>
+      <div v-else>
+        <SpinnerComp />
+      </div>
     </transition>
-    </div>
+  </div>
 </template>
 
 <script>
 import SpinnerComp from '@/components/SpinnerComp.vue';
 
 export default {
-    components: {
-        SpinnerComp
-    },
-    data() {
-        return {
-            loading: true,
-        };
-    },
-    computed: {
-        contact() {
-            return this.$store.state.contact || [];
-        }
-    },
-    async mounted() {
-        try {
-            await this.$store.dispatch('fetchContact');
-            this.loading = false;
-        } catch (error) {
-            console.error('Error fetching contact data', error);
-            this.loading = false;
-        }
-    },
+  components: {
+    SpinnerComp
+  },
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  computed: {
+    contact() {
+      return this.$store.state.contact || [];
+    }
+  },
+  async mounted() {
+    try {
+      await this.$store.dispatch('fetchContact');
+      this.loading = false;
+    } catch (error) {
+      console.error('Error fetching contact data', error);
+      this.loading = false;
+    }
+  },
 };
 </script>
 
 <style scoped>
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
@@ -115,6 +114,7 @@ export default {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -131,15 +131,14 @@ export default {
 }
 
 input {
-    background-color: #009DF5;
-    border: 3px solid black;
-    border-radius: .5pc;
+  background-color: #009DF5;
+  border: 3px solid white;
+  border-radius: .5pc;
 }
 
 span {
   color: #009DF5;
 }
-
 
 .btn-3 {
   background: rgb(0, 172, 238);
@@ -229,7 +228,53 @@ span {
 .btn-3 span:hover:after {
   width: 100%;
 }
+
 .con {
-    margin: 2em 2em 0 0em;
+  margin: 2em 2em 0 0em;
 }
-</style>
+
+@media screen and (300px<=width) {
+  :is(h1) {
+    font-size: 40px;
+  }
+
+  :is(h2) {
+    font-size: 20px;
+  }
+}
+
+@media screen and (301<=width<= 720px) {
+  :is(h1) {
+    font-size: 60px;
+  }
+
+  :is(h2) {
+    font-size: 30px;
+  }
+
+  :is(h4) {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (721px<=width) {
+  :is(h1) {
+    font-size: 80px;
+  }
+
+  :is(h2) {
+    font-size: 35px;
+  }
+
+  :is(h4) {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 18px;
+  }
+}</style>

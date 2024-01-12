@@ -1,19 +1,14 @@
 <template>
   <div id="carouselExampleDark" class="carousel slide">
     <div class="carousel-inner">
-        <div class="carousel-indicators">
-          <button v-for="(person, index) in review" :key="person.id" type="button" data-bs-target="carouselExampleDark"
-            :data-bs-slide-to="index" :class="{ active: index === 0 }" aria-label="Slide {{ index + 1 }}"></button>
-        </div>
       <div v-for="(person, index) in review" :key="person.id" class="carousel-item" :class="{ active: index === 0 }"
         :data-bs-interval="10000">
         <div class="row d-flex justify-content-center">
-          <div class="col-3">            
-            <img :src="person.persImage" class="d-block" :alt="`Slide`">
-            <div class="carousel-caption d-none d-md-block">
+          <div class="col-12 col-md-3">
+            <img :src="person.persImage" class="d-block w-100" :alt="`Slide`">
+            <div class="carousel-caption d-none d-md-block"></div>
           </div>
-        </div>
-        <div class="col-5">
+          <div class="col-12 col-md-5">
             <h1>{{ person.persName }}</h1>
             <p>{{ person.persComment }}</p>
           </div>
@@ -29,7 +24,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  
 </template>
 
 <script>
@@ -53,10 +47,8 @@ export default {
 
 <style scoped>
 img[alt="Slide"] {
-  width: 310px;
-  display: flex;
-  justify-content: end;
-  height: 350px;
+  width: 100%;
+  height: auto;
   border-radius: 2pc;
   border: 5px solid #009DF5;
 }
@@ -76,4 +68,21 @@ p {
   bottom: 5em;
 }
 
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1080px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 </style>
