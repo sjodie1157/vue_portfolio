@@ -64,6 +64,6 @@ export default {
 }
 
 .router-link-active {
-  color: white!important;
+  color: white !important;
 }
 </style>
