@@ -81,18 +81,52 @@ span {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: greetingLine-one .7s;
+}
+
+@keyframes greetingLine-one {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :is(h2) {
   font-size: 45px;
   font-weight: 900;
   color: white;
+  animation: greetingLine-two 2s;
 }
+
+@keyframes greetingLine-two {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 img[alt="professionalArt"] {
   position: fixed;
   right: 0;
   bottom: 0;
+  animation: image-fade 2s;
+}
+
+@keyframes image-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn-3 {

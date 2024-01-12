@@ -73,8 +73,18 @@ export default {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: resumeLine-one 1.5s;
 }
 
+@keyframes resumeLine-one {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 span {
   color: #009DF5;
 }
