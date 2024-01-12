@@ -29,7 +29,7 @@
         <SpinnerComp />
       </div>
     </transition>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -62,7 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
@@ -89,6 +88,7 @@ span {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -106,12 +106,11 @@ span {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-
-
 
 img[alt="professionalArt"] {
   position: fixed;
@@ -120,10 +119,29 @@ img[alt="professionalArt"] {
   animation: image-fade 2s;
 }
 
+@media screen and (300px<=width<720px) {
+  img[alt="professionalArt"] {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  max-width: 250px;
+}
+}
+
+@media screen and (720px<=width<1250px) {
+  img[alt="professionalArt"] {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: fit-content;
+}
+}
+
 @keyframes image-fade {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

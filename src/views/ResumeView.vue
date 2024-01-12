@@ -1,39 +1,28 @@
 <template>
     <div>
         <transition name="fade">
-        <div v-if="!loading && resume.length">
-            <h1 class="m-5">
-                Resu<span>me</span>
-            </h1>
-            <div class="container d-flex justify-content-center my-5">
-                <a type="" href="#"><button type="button">Download CV</button></a>
-            </div>
-            <div class="container-fluid">
-                <div class="row d-flex justify-content-center" id="line">
-                    ________________________________________
+            <div v-if="!loading && resume.length">
+                <h1 class="m-lg-5">
+                    Resu<span>me</span>
+                </h1>
+                <div class="container d-flex justify-content-center my-5">
+                    <a type="" href="#"><button type="button">Download CV</button></a>
                 </div>
-                <div class="row">
-                    <div class="col d-flex flex-column" v-for="experience in resume" :key="experience.id">
-                        <p>
-                            |
-                        </p>
-                        <p>
-                            {{ experience.year }}
-                        </p>
-                        <p>
-                            {{ experience.description }}
-                        </p>
-                        <p>
-                            {{ experience.place }}
-                        </p>
-                        <a type="" :href="experience.certificate"><button type="button">Download certificate</button></a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col d-flex flex-column" v-for="experience in resume" :key="experience.id">
+                            <p>{{ experience.year }}</p>
+                            <p>{{ experience.description }}</p>
+                            <p>{{ experience.place }}</p>
+                            <a type="" :href="experience.certificate"><button type="button">Download
+                                    certificate</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div v-else>
-            <SpinnerComp />
-        </div>
+            <div v-else>
+                <SpinnerComp />
+            </div>
         </transition>
     </div>
 </template>
@@ -68,25 +57,46 @@ export default {
 </script>
 
 <style scoped>
-
 :is(h1) {
-  font-size: 75px;
-  font-weight: 1000;
-  color: white;
-  animation: resumeLine-one 1.5s;
+    font-size: 75px;
+    font-weight: 1000;
+    color: white;
+    animation: resumeLine-one 1.5s;
+}
+
+@media screen and (width<=300px) {
+    :is(h1) {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (301<=width<=720px) {
+    :is(h1) {
+        font-size: 60px;
+    }
 }
 
 @keyframes resumeLine-one {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 span {
-  color: #009DF5;
+    color: #009DF5;
 }
 
 p {
@@ -95,13 +105,14 @@ p {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s;
+    transition: opacity 0.3s;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
+
 .col {
     display: flex;
     flex-basis: 20%;
@@ -149,4 +160,5 @@ button:hover {
     color: white;
     background-color: #009DF5;
 }
+
 </style>
