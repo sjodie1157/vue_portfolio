@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col d-flex justify-content-center m-lg-5" v-for="project in projects" :key="project.id">
                     <div class="card" style="width: 15rem;">
-                        <img :src="project.projImage" class="card-img-top" alt="projects" />
+                        <img :src="project.projImage" class="card-img-top" alt="projects" loading="eager">
                         <div class="card-body d-flex justify-content-center flex-column">
                             <h5 class="card-title d-flex justify-content-center">{{ project.projName }}</h5>
                             <button type="button" :data-bs-toggle="'modal'" :data-bs-target="'#modal' + project.id">
@@ -22,7 +22,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body d-flex justify-content-center flex-column">
-                                    <img :src="project.projImage" alt="modalImg">
+                                    <img :src="project.projImage" alt="modalImg" loading="eager">
                                     <p>{{ project.projDisc }}</p>
                                     <div class="row">
                                         <div class="col d-flex justify-content-center my-1">
