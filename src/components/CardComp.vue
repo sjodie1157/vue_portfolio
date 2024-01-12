@@ -123,7 +123,7 @@ p {
     border-radius: .5pc;
 }
 
-.modal-content{
+.modal-content {
     background-color: #009bf500;
 }
 

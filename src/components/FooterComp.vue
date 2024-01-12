@@ -35,9 +35,9 @@ export default {
     font-weight: 600;
     transition: all 0.3s;
 }
+
 .footer:hover {
     background-color: black;
     color: #009DF5;
 }
-
 </style>

@@ -116,27 +116,27 @@ img[alt="professionalimage"] {
 
 @media screen and (300px<=width<430px) {
   img[alt="professionalimage"] {
-  position: relative;
-  right: 0;
-  bottom: -1.5em;
-  max-width: 250px;
-}
+    position: relative;
+    right: 0;
+    bottom: -1.5em;
+    max-width: 250px;
+  }
 }
 
 @media screen and (430px<=width<720px) {
   img[alt="professionalimage"] {
-  right: 0;
-  bottom: -1.5em;
-  max-width: 250px;
-}
+    right: 0;
+    bottom: -1.5em;
+    max-width: 250px;
+  }
 }
 
 @media screen and (720px<=width<1250px) {
   img[alt="professionalimage"] {
-  position: relative;
-  bottom: -1.5em;
-  min-width: fit-content;
-}
+    position: relative;
+    bottom: -1.5em;
+    min-width: fit-content;
+  }
 }
 
 @keyframes image-fade {
@@ -149,7 +149,7 @@ img[alt="professionalimage"] {
   }
 }
 
-@media screen and (width<= 300px) {
+@media screen and (width<=300px) {
   :is(h1) {
     font-size: 40px;
   }
@@ -179,7 +179,7 @@ img[alt="professionalimage"] {
   }
 }
 
-@media screen and (721px<=width<= 1080px) {
+@media screen and (721px<=width<=1080px) {
   :is(h1) {
     font-size: 80px;
   }
@@ -187,4 +187,5 @@ img[alt="professionalimage"] {
   :is(h3) {
     font-size: 24px;
   }
-}</style>
+}
+</style>

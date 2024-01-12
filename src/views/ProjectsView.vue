@@ -103,13 +103,13 @@ span {
   }
 }
 
-@media screen and (301px<=width<= 720px) {
+@media screen and (301px<=width<=720px) {
   :is(h1) {
     font-size: 60px;
   }
 }
 
-@media screen and (721px<=width<= 1080px) {
+@media screen and (721px<=width<=1080px) {
   :is(h1) {
     font-size: 80px;
   }

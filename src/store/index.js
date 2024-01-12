@@ -46,17 +46,17 @@ export default createStore({
     async fetchProjects(context) {
       let res = await fetch(dataUrl)
       let { projects } = await res.json()
-      context.commit('setProjects', projects )
+      context.commit('setProjects', projects)
     },
     async fetchReview(context) {
       let res = await fetch(dataUrl)
       let { review } = await res.json()
-      context.commit('setReview', review )
+      context.commit('setReview', review)
     },
     async fetchResume(context) {
       let res = await fetch(dataUrl)
       let { resume } = await res.json()
-      context.commit('setResume', resume )
+      context.commit('setResume', resume)
     },
     async fetchContact(context) {
       let res = await fetch(dataUrl)
