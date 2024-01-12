@@ -7,7 +7,9 @@
             </transition>
             <div class="container">
             <transition name="fade">
-                <CarouselComp />
+                <div class="animate">
+                    <CarouselComp />
+                </div>
             </transition>
             </div>
         </div>
@@ -62,6 +64,35 @@ export default {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: resumeLine-one 1.5s;
+}
+
+@keyframes resumeLine-one {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate {
+  animation: carousel 1.5s;
+}
+
+.review {
+      overflow-x: hidden;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 span {

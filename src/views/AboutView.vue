@@ -73,6 +73,17 @@ span {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: aboutLine-one 2s;
+}
+
+@keyframes aboutLine-one {
+  0% {
+    transform: translatey(40%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :is(h3) {
@@ -81,13 +92,31 @@ span {
   transition: font-size 0.5s, font-weight 0.5s;
   color: white;
   text-shadow: black;
+  animation: greetingLine-two 1.5s;
 }
 
-
+@keyframes greetingLine-two {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 img[alt="professionalimage"] {
   position: fixed;
   right: 0;
   bottom: 0;
+  animation: image-fade 2s;
 }
 
+@keyframes image-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>

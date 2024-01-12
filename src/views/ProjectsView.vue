@@ -2,10 +2,12 @@
     <transition name="fade">
         <div v-if="!loading && projects.length">
             <h1 class="m-5">
-                Resu<span>me</span>
+                Past<span> projects</span>
             </h1>
             <transition name="fade">
-            <CardComp />
+            <div class="cards">
+                <CardComp />
+            </div>
         </transition>
         </div>
         <div v-else>
@@ -58,10 +60,34 @@ export default {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: resumeLine-one 1.5s;
+}
+
+@keyframes resumeLine-one {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 span {
   color: #009DF5;
 }
 
+.cards {
+  animation: cards 1.5s;
+}
+
+@keyframes cards {
+  0% {
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>

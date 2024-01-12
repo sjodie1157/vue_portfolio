@@ -26,19 +26,19 @@
                                 <h4>
                                     Name
                                 </h4>
-                                <input type="text" name="firstName" placeholder="Type Name Here" required>
+                                <input type="text" name="firstName" required>
                             </div>
                             <div class="col">
                                 <h4>
                                     Surname
                                 </h4>
-                                <input type="text" name="lastName" placeholder="Type Surname Here" required>
+                                <input type="text" name="lastName" required>
                             </div>
                             <div class="col">
                                 <h4>
                                     Email
                                 </h4>
-                                <input type="text" name="email" placeholder="Type Email Here" required>
+                                <input type="text" name="email" required>
                             </div>
                         </div>
                         <div class="row">
@@ -107,6 +107,17 @@ export default {
   font-size: 75px;
   font-weight: 1000;
   color: white;
+  animation: resumeLine-one 1.5s;
+}
+
+@keyframes resumeLine-one {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :is(h2) {
@@ -120,10 +131,9 @@ export default {
 }
 
 input {
-    background-color: white;
-    color: #009DF5;
-    border: 2px solid #009DF5;
-    border-radius: .3pc;
+    background-color: #009DF5;
+    border: 3px solid black;
+    border-radius: .5pc;
 }
 
 span {
