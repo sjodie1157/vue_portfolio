@@ -16,22 +16,19 @@
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">{{ project.projName }}</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    </button>
-                                </div>
                                 <div class="modal-body d-flex justify-content-center flex-column">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ project.projName }}</h5>
                                     <img :src="project.projImage" alt="modalImg" loading="eager">
                                     <p>{{ project.projDisc }}</p>
                                     <div class="row">
                                         <div class="col d-flex justify-content-center my-1">
-                                            <a :href="project.netlifyLink" target="_blank" id="netbtn"><button type="button"
-                                                    class="btn-3">Netlify</button></a>
+                                            <a :href="project.netlifyLink" target="_blank" id="netbtn"><button
+                                                    type="button" class="btn-3">Live Link</button>
+                                            </a>
                                         </div>
                                         <div class="col d-flex justify-content-center">
-                                            <a :href="project.githubLink" target="_blank" id="gitbtn"><button type="button"
-                                                    class="btn-3">Github</button></a>
+                                            <a :href="project.githubLink" target="_blank" id="gitbtn"><button
+                                                    type="button" class="btn-3">Github Repo</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -96,26 +93,35 @@ img[alt="projects"] {
 
 .card {
     border: 3px solid #0076bb93;
-    box-shadow: black 0px 2px 4px;
+    box-shadow: rgba(0, 0, 0, 0.315) 0px 10px 20px, rgba(0, 0, 0, 0.315) 0px 6px 6px;
     border-radius: .5pc;
     transition: all 0.3s;
     margin: .5em;
-    background-color: rgba(128, 128, 128, 0.256);
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: rgba(253, 253, 253, 0.256);
 }
 
 .modal-body {
-    background-image: linear-gradient(#009bf585, #009bf5);
+    background-image: linear-gradient(#009bf5, transparent);
     border-bottom-left-radius: .5pc;
+    border-top-left-radius: .5pc;
+    border-top-right-radius: .5pc;
     border-bottom-right-radius: .5pc;
+    transition: all .3s;
+}
+
+.modal-body:hover {
+    background-color: rgb(95, 95, 95);
 }
 
 p {
     color: white;
 }
 
-.modal-header {
-    background-image: linear-gradient(#009bf5, #009bf585);
-}
 
 .card:hover {
     border: 3px solid #0076bb93;

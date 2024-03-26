@@ -5,16 +5,13 @@
                 <h1 class="m-lg-5">
                     Resu<span>me</span>
                 </h1>
-                <div class="container d-flex justify-content-center my-5">
-                    <a type="" href="#"><button type="button">Download CV</button></a>
-                </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col d-flex flex-column" v-for="experience in resume" :key="experience.id">
+                        <div class="col d-flex flex-column justify-content-between" v-for="experience in resume" :key="experience.id">
                             <p>{{ experience.year }}</p>
                             <p>{{ experience.description }}</p>
                             <p>{{ experience.place }}</p>
-                            <a type="" :href="experience.certificate"><button type="button">Download
+                            <a :href="experience.certificate" class="my-5"><button type="button">Download
                                     certificate</button></a>
                         </div>
                     </div>

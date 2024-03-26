@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <transition name="fade">
-      <div v-if="!loading && home.length">
+      <div v-if="!loading">
         <div class="row">
           <div class="col d-flex flex-column my-5" id="lines">
             <transition name="fade">
@@ -11,16 +11,19 @@
               <h2>Aspiring <span>Front end developer</span></h2>
             </transition>
           </div>
-          <div class="container">
+          <div class="container d-flex justify-content-center justify-content-sm-center justify-content-md-start">
             <router-link class="nav-link" to="/about">
               <button class="custom-btn btn-3">
                 <span>Read More</span>
               </button>
             </router-link>
           </div>
+          <div class="container my-5 d-flex justify-content-center justify-content-sm-center justify-content-md-start">
+            <a :href="home.cv"><button type="button" class="custom-btn btn-3 text-white">Download CV</button></a>
+          </div>
           <div>
             <transition name="fade">
-              <img :src="home[1].profImg" alt="professionalArt" loading="eager">
+              <img :src="home.profImg" alt="professionalArt" loading="eager">
             </transition>
           </div>
         </div>
@@ -125,6 +128,16 @@ img[alt="professionalArt"] {
     right: 0;
     bottom: 0;
     max-width: 250px;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
   }
 }
 
