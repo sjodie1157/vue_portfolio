@@ -66,7 +66,7 @@
                       </svg></a>
                   </div>
                   <div class="con">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/jodie-smith-873285205">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin"
                         viewBox="0 0 16 16">
                         <path
