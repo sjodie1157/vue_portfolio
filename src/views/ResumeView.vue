@@ -3,7 +3,7 @@
         <transition name="fade">
             <div v-if="!loading && resume.length">
                 <h1 class="m-lg-5">
-                    Work <span> Experience</span>
+                    Education & <span> Experience</span>
                 </h1>
                 <div class="container-fluid">
                     <div class="row">
