@@ -14,6 +14,7 @@
             </div>
             <div class="col">
               <img :src="about[1].profImaArt" alt="professionalimage" loading="eager">
+              
             </div>
           </div>
         </div>
