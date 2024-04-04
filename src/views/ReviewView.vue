@@ -7,6 +7,7 @@
         </transition>
         <div class="container">
           <transition name="fade">
+            
             <div class="animate">
               <CarouselComp />
             </div>
