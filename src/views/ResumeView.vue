@@ -7,10 +7,16 @@
                 </h1>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col d-flex flex-column justify-content-between" v-for="experience in resume" :key="experience.id">
+                        <div class="col d-flex flex-column justify-content-between" v-for="experience in resume"
+                            :key="experience.id">
                             <p>{{ experience.year }}</p>
                             <p>{{ experience.description }}</p>
                             <p>{{ experience.place }}</p>
+                            <ul>
+                                <template v-if="experience.subjects && experience.subjects.length">
+                                    <li v-for="subject in experience.subjects" :key="subject">{{ subject }}</li>
+                                </template>
+                            </ul>
                             <a :href="experience.certificate" class="my-5"><button type="button">Download
                                     certificate</button></a>
                         </div>
@@ -59,6 +65,14 @@ export default {
     font-weight: 1000;
     color: white;
     animation: resumeLine-one 1.5s;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: white;
 }
 
 @media screen and (width<=300px) {
