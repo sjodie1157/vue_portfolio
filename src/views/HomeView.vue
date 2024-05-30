@@ -8,7 +8,12 @@
               <h1>Hi, I'm <span>Jodie Smith</span></h1>
             </transition>
             <transition name="fade">
-              <h2>Aspiring <span>Front end developer</span></h2>
+              <h2>Front-end <span> developer</span></h2>
+            </transition>
+            <transition name="fade">
+              <h2>IT<span> Software &
+                  <h2>Hardware <span>Support</span></h2>
+                </span></h2>
             </transition>
           </div>
           <div class="container d-flex justify-content-center justify-content-sm-center justify-content-md-start">
